@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 774207902}
   - component: {fileID: 774207903}
   - component: {fileID: 774207904}
+  - component: {fileID: 774207905}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -532,7 +533,18 @@ MonoBehaviour:
   health: 10
   onDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 774207905}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onDamaged:
@@ -569,6 +581,21 @@ MonoBehaviour:
   target: {fileID: 532853962}
   smoothing: 5
   adjustmentAngle: 270
+--- !u!114 &774207905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774207898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faded3b7e1c8f9b4482f329586ec57dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 8213693533278047995, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+    type: 3}
+  adjustmentAngle: 0
 --- !u!1 &890757729
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,3 +676,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4958272717464630695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8213693533278047995, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147171478612173105, guid: c0e3ee5a3b2414345ac124acd96fd6df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0e3ee5a3b2414345ac124acd96fd6df, type: 3}
