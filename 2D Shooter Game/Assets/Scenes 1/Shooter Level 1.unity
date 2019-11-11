@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 532853966}
   - component: {fileID: 532853968}
   - component: {fileID: 532853967}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -829,8 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f9f9bbd55355b40b371d37fcd1de16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  scoreText: {fileID: 0}
+  healthBar: {fileID: 720365632}
+  scoreText: {fileID: 1650611266}
   playerScore: 0
 --- !u!1 &890757729
 GameObject:
@@ -1104,6 +1104,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650611264}
   m_CullTransparentMesh: 0
+--- !u!1 &1664169909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 571546739111386990, guid: ce6b575eb4bf864468340ed618099dd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4111132643464423677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664169911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664169909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14caa3d0175923c43a9608c72550b0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  resetTime: 0.25
 --- !u!1 &1951583926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,21 +1271,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 532853962}
-    - target: {fileID: 4111132644032434530, guid: ce6b575eb4bf864468340ed618099dd1,
-        type: 3}
-      propertyPath: speed
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4111132644032434525, guid: ce6b575eb4bf864468340ed618099dd1,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 532853962}
-    - target: {fileID: 4111132644032434527, guid: ce6b575eb4bf864468340ed618099dd1,
-        type: 3}
-      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTarget
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce6b575eb4bf864468340ed618099dd1, type: 3}
 --- !u!1001 &4958272717464630695
