@@ -666,11 +666,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 532853962}
+    - target: {fileID: 4111132644032434530, guid: ce6b575eb4bf864468340ed618099dd1,
+        type: 3}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4111132644032434525, guid: ce6b575eb4bf864468340ed618099dd1,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 532853962}
+    - target: {fileID: 4111132644032434527, guid: ce6b575eb4bf864468340ed618099dd1,
+        type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTarget
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce6b575eb4bf864468340ed618099dd1, type: 3}
 --- !u!1001 &4958272717464630695
