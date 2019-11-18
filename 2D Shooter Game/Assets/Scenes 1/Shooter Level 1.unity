@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd07925a305ee941b804bfed09d2ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
   onDie:
     m_PersistentCalls:
       m_Calls: []
@@ -1104,26 +1104,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650611264}
   m_CullTransparentMesh: 0
---- !u!1 &1664169909 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 571546739111386990, guid: ce6b575eb4bf864468340ed618099dd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4111132643464423677}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1664169911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664169909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14caa3d0175923c43a9608c72550b0ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  resetTime: 0.25
 --- !u!1 &1951583926
 GameObject:
   m_ObjectHideFlags: 0
