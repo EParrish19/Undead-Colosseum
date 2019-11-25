@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3bacb86a88d044bb85b98d03b51474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpawn: []
+  bulletSpawn:
+  - {fileID: 59921272519876836}
   fireTime: 0.5
   isFiring: 0
