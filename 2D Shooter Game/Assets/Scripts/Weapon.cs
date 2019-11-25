@@ -5,8 +5,8 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
+    public Transform[] bulletSpawn;
     
-    public Transform bulletSpawn;
     public float fireTime = 0.5f;
 
     public bool isFiring = false;
@@ -23,11 +23,15 @@ public class Weapon : MonoBehaviour
         isFiring = true;
 
         GameObject bullet = PoolManager.current.GetPooledObject("bullet");
-        if (bullet != null)
+        for (int i = 0; i < bulletSpawn.Length; i++)
         {
-            bullet.transform.position = bulletSpawn.position;
-            bullet.transform.rotation = bulletSpawn.rotation;
-            bullet.SetActive(true);
+            //Check if bullets not spawning
+            if (bullet != null)
+            {
+                bullet.transform.position = bulletSpawn[i].position;
+                bullet.transform.rotation = bulletSpawn[i].rotation;
+                bullet.SetActive(true);
+            }
         }
 
         if(GetComponent<AudioSource>() != null)
