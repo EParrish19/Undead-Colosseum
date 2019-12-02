@@ -42,8 +42,11 @@ public class DamageIncrease : MonoBehaviour
      * oldPrefab
      * stores the original bullet prefab on the player weapon
      */ 
-    private GameObject oldPrefab;
+    public GameObject oldPrefab;
 
+    public int damageIncrease = 10;
+
+    private int oldDamage = 0;
 
     /*
      * Start
@@ -63,7 +66,7 @@ public class DamageIncrease : MonoBehaviour
          *       this will be useful when you have many weapons you wish to switch between
          * see link: https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html
          */
-        oldPrefab = transform.GetComponentInChildren<Weapon>().bulletPrefab;
+        //oldPrefab = transform.GetComponentInChildren<Weapon>().bulletPrefab;
 
         /*
          * LOAD THE HIGH DAMAGE BULLET PREFAB AND PUT IT INTO THE PLAYER WEAPON
@@ -75,7 +78,11 @@ public class DamageIncrease : MonoBehaviour
          *       this will be useful when you have many weapons you wish to switch between
          * see link: https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html
          */
-        transform.GetComponentInChildren<Weapon>().bulletPrefab = Resources.Load("Bullet Damage increase") as GameObject;
+        //transform.GetComponentInChildren<Weapon>().bulletPrefab = Resources.Load("Bullet Damage increase") as GameObject;
+
+        oldDamage = oldPrefab.GetComponent<Bullet>().damage;
+
+        oldPrefab.GetComponent<Bullet>().damage = damageIncrease;
 
         /*
          * SET A TIMER TO SWAP BULLETS BACK AGAIN
@@ -103,13 +110,15 @@ public class DamageIncrease : MonoBehaviour
          *       this will be useful when you have many weapons you wish to switch between
          * see link: https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html
          */
-        transform.GetComponentInChildren<Weapon>().bulletPrefab = oldPrefab;
+        //transform.GetComponentInChildren<Weapon>().bulletPrefab = oldPrefab;
+
+        oldPrefab.GetComponent<Bullet>().damage = oldDamage;
 
         /*
          * DESTROY THIS COMPONENT
          * here we remove this component (DamageIncrease) from the player GameObject
          * NOTE: we use "this" in the Destroy method to destroy "this" component (DamageIncrease)
-         */ 
+         */
         Destroy(this);
     }
 }
