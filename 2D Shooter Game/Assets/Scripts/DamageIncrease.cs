@@ -36,7 +36,7 @@ public class DamageIncrease : MonoBehaviour
      * time
      * the total time the pickup is active in seconds
      */
-    private float time = 5;
+    private float time = 2;
 
     /*
      * oldPrefab
@@ -44,9 +44,10 @@ public class DamageIncrease : MonoBehaviour
      */ 
     public GameObject oldPrefab;
 
-    public int damageIncrease = 10;
+    public int damageIncrease = 76764467;
+    
 
-    private int oldDamage = 0;
+    private int oldDamage = 10;
 
     /*
      * Start
@@ -80,15 +81,24 @@ public class DamageIncrease : MonoBehaviour
          */
         //transform.GetComponentInChildren<Weapon>().bulletPrefab = Resources.Load("Bullet Damage increase") as GameObject;
 
-        oldDamage = oldPrefab.GetComponent<Bullet>().damage;
+        //oldPrefab = PoolManager.current.GetPooledObject("bullet");
 
-        oldPrefab.GetComponent<Bullet>().damage = damageIncrease;
+        //oldDamage = oldPrefab.GetComponent<Bullet>().damage;
+
+
+
+        //oldPrefab.GetComponent<Bullet>().damage = damageIncrease;
+
+        // print(oldPrefab.GetComponent<Bullet>().damage);
+
+
+        PoolManager.current.SetBulletDamage("bullet", damageIncrease);
 
         /*
          * SET A TIMER TO SWAP BULLETS BACK AGAIN
          * set an Invoke timer to call the "TimeOut" method
          * TimeOut will swap the high damage bullet for the original bullet
-         */ 
+         */
         Invoke("TimeOut", time);
     }
 
@@ -112,7 +122,9 @@ public class DamageIncrease : MonoBehaviour
          */
         //transform.GetComponentInChildren<Weapon>().bulletPrefab = oldPrefab;
 
-        oldPrefab.GetComponent<Bullet>().damage = oldDamage;
+        //oldPrefab.GetComponent<Bullet>().damage = oldDamage;
+
+        PoolManager.current.SetBulletDamage("bullet", oldDamage);
 
         /*
          * DESTROY THIS COMPONENT

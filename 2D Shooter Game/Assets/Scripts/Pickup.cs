@@ -92,6 +92,7 @@ public class Pickup : MonoBehaviour
              */ 
             case PickupType.Damage:
                 other.gameObject.AddComponent<DamageIncrease>();
+
                 break;
 
             /*

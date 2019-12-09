@@ -60,5 +60,22 @@ public class PoolManager : MonoBehaviour
                     tempList[i].SetActive(false);
     }
 
+
+
+    public void SetBulletDamage(string name, int damage)
+    {
+        if (mainPool.ContainsKey(name))
+        {
+            tempList = mainPool[name] as List<GameObject>;
+
+            for (int i = 0; i < tempList.Count; i++)
+            {
+
+                tempList[i].GetComponent<Bullet>().damage = damage;
+            }
+
+
+        }
+    }
         
 }
