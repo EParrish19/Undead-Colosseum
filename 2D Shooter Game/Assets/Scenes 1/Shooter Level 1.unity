@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   names:
-  - bullet
+  - Bullet
   pooledObjects:
   - {fileID: 2270688855563853562, guid: 6843cfa0b3bfd5943a296cbdc7458997, type: 3}
   poolAmounts: 14000000
