@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Shooter Level 1");
     }
 
     
