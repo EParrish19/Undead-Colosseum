@@ -36,4 +36,11 @@ public class Player : MonoBehaviour
         }
 
     }
+    public void OnHurt()
+    {
+        if (GetComponent<AudioSource>() != null)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+    }
 }
