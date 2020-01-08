@@ -33,6 +33,7 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
+    
     /*
      * START
      * see link: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html
@@ -120,6 +121,11 @@ public class WeaponManager : MonoBehaviour
          * see link: https://docs.unity3d.com/ScriptReference/Transform.GetSiblingIndex.html
          */
         ChangeWeapon(weapon.transform.GetSiblingIndex());
+
+       
+
+        
+        
     }
 
 
